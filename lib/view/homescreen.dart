@@ -47,7 +47,7 @@ class _HomescreenPageState extends State<HomescreenPage> {
             child: Column(
               children: [
                 const SizedBox(
-                  height: 50,
+                  height: 10,
                 ),
                 const Text(
                   'Student Information',
@@ -129,6 +129,44 @@ class _HomescreenPageState extends State<HomescreenPage> {
                         hintText: "Age"),
                   ),
                 ),
+                const SizedBox(
+                  height: 25,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: TextField(
+                    controller: genderController,
+                    decoration: const InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey),
+                        ),
+                        fillColor: Colors.grey,
+                        filled: true,
+                        hintText: "Score"),
+                  ),
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: TextField(
+                    controller: genderController,
+                    decoration: const InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey),
+                        ),
+                        fillColor: Colors.grey,
+                        filled: true,
+                        hintText: "Total"),
+                  ),
+                ),
                 const SizedBox(height: 80),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -138,8 +176,8 @@ class _HomescreenPageState extends State<HomescreenPage> {
                         Navigator.pop(context);
                       },
                       child: Container(
-                        height: 80,
-                        width: 150,
+                        height: 60,
+                        width: 100,
                         decoration: BoxDecoration(
                             color: Colors.black,
                             borderRadius: BorderRadius.circular(12.0)),
@@ -163,8 +201,8 @@ class _HomescreenPageState extends State<HomescreenPage> {
                               .whenComplete(() => Navigator.pop(context));
                         },
                         child: Container(
-                          height: 80,
-                          width: 150,
+                          height: 60,
+                          width: 100,
                           decoration: BoxDecoration(
                               color: Colors.black,
                               borderRadius: BorderRadius.circular(12.0)),
@@ -189,8 +227,8 @@ class _HomescreenPageState extends State<HomescreenPage> {
                               .whenComplete(() => Navigator.pop(context));
                         },
                         child: Container(
-                          height: 80,
-                          width: 150,
+                          height: 60,
+                          width: 100,
                           decoration: BoxDecoration(
                               color: Colors.black,
                               borderRadius: BorderRadius.circular(12.0)),
