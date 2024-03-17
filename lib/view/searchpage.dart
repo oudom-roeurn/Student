@@ -33,11 +33,13 @@ class _SearchPageState extends State<SearchPage> {
                 prefixIcon: Icon(Icons.search, color: Colors.black45),
                 border: InputBorder.none),
             onChanged: (value) async {
-              await DatabaseHalper().searchStudent(value).then((student) {
-                setState(() {
-                  studentList = student;
-                });
-              });
+              await DatabaseHalper().searchStudent(value).then(
+                (student) {
+                  setState(() {
+                    studentList = student;
+                  });
+                },
+              );
             },
           ),
         )),

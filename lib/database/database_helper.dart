@@ -67,4 +67,12 @@ class DatabaseHalper {
     log(result.toString());
     return result.map((e) => Student.fromMap(e)).toList();
   }
+
+  Future<List<Student>> searchGender(String? searchgender) async {
+    var db = await DatabaseHalper().initDataBase();
+    List<Map<String, dynamic>> result = await db.query(tableName,
+        where: 'gender LIKE ?', whereArgs: ['$searchgender%']);
+    log(result.toString());
+    return result.map((e) => Student.fromMap(e)).toList();
+  }
 }
